@@ -4,9 +4,8 @@
 #include <string.h>
 #include <sys/utsname.h>
 
-int main(int argc, char *argv[]) {
-
-        struct UNAME_STRUCT ubuffer;
+int main(int argc, char *argv[]) { 
+    struct utsname ubuffer;
 
     // Check for proper usage
     if (argc != 1) {
@@ -15,8 +14,11 @@ int main(int argc, char *argv[]) {
     }
 
     uname(&ubuffer);
-
-    printf("System name: %s\n", ubuffer.sysname);
-
+    if(uname(&ubuffer)<0) {
+	printf("Failed to uname");
+    }
+    else {
+    	printf("System name: %s\n", ubuffer.sysname);
+    }
     return 0;
 }
