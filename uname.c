@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
     else {
     	printf("System name: %s\n", ubuffer.sysname);
   	printf("Host name: %s\n", ubuffer.nodename);  
-  
+ 	printf("OS Release: %s\n", ubuffer.release); 
     }
     return 0;
 }
