@@ -21,6 +21,7 @@ int main(int argc, char *argv[]) {
     	printf("System name: %s\n", ubuffer.sysname);
   	printf("Host name: %s\n", ubuffer.nodename);  
  	printf("OS Release: %s\n", ubuffer.release); 
+	printf("OS Version: %s\n", ubuffer.version);
     }
     return 0;
 }
